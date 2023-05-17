@@ -19,6 +19,7 @@ from transformers import (
     GPT2Tokenizer,
     RobertaConfig,
     RobertaTokenizer,
+    AutoTokenizer,
 )
 
 from simpletransformers.config.model_args import ModelArgs
@@ -88,7 +89,7 @@ class RepresentationModel:
 
         MODEL_CLASSES = {
             "bert": (BertConfig, BertForTextRepresentation, BertTokenizer),
-            "roberta": (RobertaConfig, BertForTextRepresentation, RobertaTokenizer),
+            "roberta": (RobertaConfig, BertForTextRepresentation, AutoTokenizer),
             "gpt2": (GPT2Config, GPT2ForTextRepresentation, GPT2Tokenizer),
         }
 
